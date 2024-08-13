@@ -1,0 +1,553 @@
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right:0;
+    background: #fff;
+    padding:1rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    /* border: 1px solid; */
+}
+
+/* header .logo{
+    color:var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+} */
+.waviy
+{
+    position: relative;
+    -webkit-box-reflect:below -20px linear gradient(transparent);
+    font-size: 20px;
+    /* border: 1px solid; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+}
+.waviy:hover
+{
+    /* background-color: #00b074; */
+    border-radius: 10px;
+    /* color: white; */
+    background-color: black;
+}
+.waviy span{
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    display: inline-block;
+    color:#00b074;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+.waviy span:hover
+{
+    color: white;
+}
+
+header .logo i
+{
+    color:red;
+    border: 1px solid;
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    /* padding:  2rem; */
+    color:var(--light-color);
+    /* border: 1px solid; */
+    position: relative;
+}
+
+header.navbar a.active,
+header .navbar a:hover{
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border: 1px solid;
+    letter-spacing: 2px;
+    /* background: var(--green); */
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;;
+    color:var(--black);
+    border-radius: 50%;
+    background-color: #eee;
+}
+header .icons i:hover,
+header .icons a:hover{
+    color: black;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+header .icons #menu-bars
+{
+    display: none;
+}
+
+.navbar{
+    margin-left: 40%;
+    /* border: 1px solid; */
+    width: 200%;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+    align-items: center;
+    /* position: absolute; */
+}
+.post
+{
+    /* border: 1px solid; */
+    padding: 20px;      
+    /* display: flex; */
+    background-color: green;
+}
+.home
+{
+    background: url(note.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 100%; */
+    height: 65em;
+    position: relative;
+    opacity: 0.9;
+}
+.page1
+{
+    /* background-color: green; */
+    position: absolute;
+    margin-top: 20%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    /* border: 1px solid; */
+    /* padding: 100px; */
+}
+.page1 h1{
+    font-size: 8rem;
+}
+.page1 p{
+    font-size: 3rem;
+}
+.button
+{
+    /* padding: 10px; */
+    font-weight: 800;
+    display: flex;
+    gap: 10px;  
+}
+.button button{
+    padding: 10px 30px;
+    font-weight: 800;
+}
+.button button:nth-child(1)
+{
+    background-color: green;
+    color: white;
+}
+.button button:nth-child(2)
+{
+    background-color: cyan;
+    color: white;
+}
+.page2{
+    background-color: #00b074;
+    display: flex;
+    /* justify-content: space-around; */
+    gap: 10px;
+    padding: 25px;
+}
+.page2 input{
+    width: 30%;
+    padding: 10px 30px;
+}
+.page2 button
+{
+    width: 30%;
+}
+.about h1
+{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 5%;
+}
+.page3
+{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+   
+
+.up div{
+    /* border: 1px solid; */
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow:0px 0px 5px 0px;
+} 
+.up div i{
+    font-size: 5rem;
+   color:#00b074;
+}
+.up{
+    display: flex;
+    justify-content: space-between;
+}
+.up div p{
+    color: #00b074;
+    font-size: 1.5rem;
+}
+.slow div img{
+    width: 45%;
+}
+.slow{
+    /* display: flex; */
+    width: 50%;
+    /* border: 1px solid; */
+}
+.slow div{
+    display: flex;
+    width: 100%;
+    /* border: 1px solid; */
+}
+.page4
+{
+    display: flex;
+    /* flex-direction: column; */
+    padding: 20px;
+    margin-top: 5%;
+}
+.keep
+{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    /* padding: 20px; */
+    width: 50%;
+    margin-top: 10%;
+}
+.keep button{
+    width: 30%;
+    padding: 10px 40px;
+    background-color: #00b074;
+}
+.keep div h2{
+    font-size: 5rem;
+}
+.keep div p{
+    font-size: 1.5rem;
+    line-height: 2;
+    word-spacing: 3px;
+}
+.p-tags
+{
+    display: flex;
+    flex-direction: column;
+}
+.job h1{
+    font-size: 5rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+}
+.title
+{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 5%;
+}
+.title p{
+    font-size:  2rem;
+}
+.left img{
+    width: 15%;
+}
+.left{
+    width: 50%;
+    border: 1px solid;
+    display: flex;
+}
+.left div{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px;
+}
+.left div h2{
+    font-size: 2rem;
+}
+.left div p{
+    font-size: 1.5rem;
+}
+.colomn-1
+{
+    display: flex;
+    border: 1px solid;
+    width: 80%;
+}
+.right
+{
+    width: 50%;
+}
+.right div{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: end;
+    align-items: end;
+    padding: 10px;
+}
+.right div p{
+    font-size: 1.5rem;
+}
+.right div button{
+    background-color: #00b074 ;
+}
+.right div button{
+    width: 50%;
+    padding: 10px;
+    /* font-weight: 800; */
+}
+.page5
+{
+    /* align-items: center; */
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes waviy {
+    0%,40%,100%
+    {
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(-20px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media qqueries------------------------------------------------------------------ */
+
+
+@media (max-width:991px)
+{
+    html {
+        font-size: 55%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+    .waviy
+    {
+        /* width: 00%; */
+        /* border: 1px solid; */
+    }
+    .navbar
+    {
+        border: 1px solid;
+        width: 300%;
+    }
+}
+@media (max-width:768px)
+{
+
+    header .icons #menu-bars
+    {
+        display: inline-block;
+    }
+
+    header .navbar
+    {
+        position: absolute;
+        top: 100%;
+        left: 1;
+        right: 0;
+        background: gray;
+        border-bottom: .1rem; solid rgba(0,0,0,.2);
+        border-top: .1rem; solid rgba(0,0,0,.2);
+        padding: 3px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        width: 100%;
+        flex-direction: column;
+    }
+    header
+    {
+        justify-content: space-between;
+    }
+
+    header .navbar.active
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        /* display: flex; */
+    }
+
+    header .navbar a
+    {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #eee;
+    }
+    .page1 h1{
+        font-size: 6rem;
+    }
+    .page2
+    {
+        flex-direction: column;
+    }
+    .page2 input{
+        width: 100%;
+    }
+    .page2 button{
+        width: 100%;
+        padding: 10px;
+    }
+    .up
+    {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .up div{
+        width: 100%;
+    }
+    .page4
+    {
+        flex-direction: column;
+    }
+    .slow
+    {
+        width: 50%;
+    }
+    .slow div img{
+        width: 100%;
+    }
+    .keep{
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+    .keep div h2{
+        font-size: 4rem;
+    }
+    .keep button
+    {
+        width: 100%;
+    }
+   
+}
+
+@media (max-width:991px)
+{
+    html {
+        font-size: 50%;
+    }
+    
+   
+}
+@media (max-width:400px)
+{
+    .page1 h1{
+        font-size: 5rem;
+    }
+    .button
+    {
+        flex-direction: column;
+       
+    }
+    .button button
+    {
+        width: 90%;
+    }
+    .keep div h2{
+        font-size: 2rem;
+    }
+    
+}
